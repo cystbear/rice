@@ -1,6 +1,5 @@
-rice_deck_keeper:
-    resource: "@RiceDeckKeeperBundle/Controller/"
-    type:     annotation
+rice_deck_keeper_frontend:
+    resource:   @RiceDeckKeeperBundle/Resources/config/routing/frontend.yml
     prefix:   /
 
 # Internal routing configuration to handle ESI
