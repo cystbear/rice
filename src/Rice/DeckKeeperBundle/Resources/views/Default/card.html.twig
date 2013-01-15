@@ -7,18 +7,18 @@
 
             <div class="post_box">
                 <div class="post_header">
-                    <a href="#"><h2>{{ card }}</h2></a>
+                    <a href="#"><h2>{{ card.translate(app.request.locale).name }}</h2></a>
                 </div>
                 <img src="/{{ card.image }}" alt="{{ card.slug }}"/>
-                <p>{{ card.description }}</p>
-                <p><strong>{{ card.artisticdescription }}</strong></p>
+                <p>{{ card.translate(app.request.locale).description }}</p>
+                <p><strong>{{ card.translate(app.request.locale).artisticdescription }}</strong></p>
 
                 <hr />
 
                 <p>{{ 'Set'|trans }}: <strong>{{ card.cardSet }}</strong></p>
                 <p>{{ 'Mana Cost'|trans }}: <strong>{{ card.manaCost }}</strong></p>
-                <p>{{ 'Type'|trans }}: <strong>{{ card.type }}</strong></p>
-                <p>{{ 'Sub Type'|trans }}: <strong>{{ card.subType }}</strong></p>
+                <p>{{ 'Type'|trans }}: <strong>{{ card.translate(app.request.locale).type }}</strong></p>
+                <p>{{ 'Sub Type'|trans }}: <strong>{{ card.translate(app.request.locale).subType }}</strong></p>
                 <p>{{ 'Rarity'|trans }}: <strong>{{ card.rarity }}</strong></p>
                 <p>{{ 'Power'|trans }}: <strong>{{ card.power }}</strong></p>
                 <p>{{ 'Toughness'|trans }}: <strong>{{ card.toughness }}</strong></p>
