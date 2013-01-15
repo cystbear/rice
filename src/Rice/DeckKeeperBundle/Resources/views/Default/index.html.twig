@@ -11,7 +11,9 @@
                     <div class="post_header">
                         <a href="{{ path('frontend_deck_keeper_card', {slug: card.slug}) }}"><h2>{{ card }}</h2></a>
                     </div>
-                    <a href="#"><img src="images/templatemo_image_06.jpg" alt="Image"/></a>
+                    <a href="{{ path('frontend_deck_keeper_card', {slug: card.slug}) }}">
+                        <img src="/{{ card.image }}" alt="{{ card.slug }}"/>
+                    </a>
                     <p>{{ card.description }}</p>
                     <p><strong>{{ card.artisticdescription }}</strong></p>
                     <div class="cleaner"></div>
