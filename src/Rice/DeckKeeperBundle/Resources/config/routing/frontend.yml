@@ -5,3 +5,7 @@ frontend_deck_keeper_index:
 frontend_deck_keeper_card:
     pattern:    /card/{slug}
     defaults:   { _controller: RiceDeckKeeperBundle:Default:card }
+
+frontend_deck_keeper_cardset_index:
+    pattern:    /sets
+    defaults:   { _controller: RiceDeckKeeperBundle:CardSet:index }
