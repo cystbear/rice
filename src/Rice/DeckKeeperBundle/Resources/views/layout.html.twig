@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>DeckKeeper</title>
+
+    <link href="{{ asset('bundles/ricedeckkeeper/css/templatemo_style.css') }}" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="templatemo_body_wrapper">
+    <div id="templatemo_wrapper">
+
+        <div id="templatemo_header">
+
+            <div id="site_title">
+
+                <img src="{{ asset('bundles/ricedeckkeeper/images/templatemo_logo.png') }}" alt="Logo" />
+
+            </div>
+
+            <div id="search_box">
+                <form action="#" method="get">
+                    <input
+                        type="text"
+                        value="Search"
+                        name="q"
+                        size="10"
+                        id="searchfield"
+                        title="searchfield"
+                        onfocus="clearText(this)"
+                        onblur="clearText(this)"
+                    />
+                </form>
+            </div>
+
+        </div>
+
+        <div id="templatemo_menu">
+            <ul>
+                <li><a href="{{ path('frontend_deck_keeper_index') }}">Cards</a></li>
+                <li><a href="news.html" class="current last">Sets</a></li>
+            </ul>
+        </div>
+
+        {% block content %}{% endblock content %}
+
+        <div id="templatemo_main_bottom"></div>
+        <div class="cleaner"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
