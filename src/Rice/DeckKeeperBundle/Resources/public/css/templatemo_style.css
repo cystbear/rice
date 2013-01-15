@@ -21,7 +21,7 @@ a.more {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    background: url(images/templatemo_more.png) no-repeat top center;
+    background: url(../images/templatemo_more.png) no-repeat top center;
     color: #000;
     text-shadow: 1px 1px 1px #fff;
 }
@@ -60,20 +60,20 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
 
 .tmo_list { margin: 20px 0 20px 10px; padding: 0; list-style: none }
-.tmo_list li { color:#3d8e7d; margin: 0; padding: 0 0 5px 20px; background: url(images/templatmeo_list.png) no-repeat scroll 0 3px  }
+.tmo_list li { color:#3d8e7d; margin: 0; padding: 0 0 5px 20px; background: url(../images/templatmeo_list.png) no-repeat scroll 0 3px  }
 .tmo_list li a { color: #3d8e7d; font-weight: normal; font-size: 12px; text-decoration: none }
 .tmo_list li a:hover { color: #000 }
 
 #templatemo_body_wrapper {
     width: 100%;
-    background: url(images/templatmeo_body.png) top center no-repeat
+    background: url(../images/templatmeo_body.png) top center no-repeat
 }
 
 #templatemo_wrapper {
     width: 940px;
     padding: 0 10px;
     margin: 0 auto;
-    background: url(images/templatmeo_body.png) top center no-repeat
+    background: url(../images/templatmeo_body.png) top center no-repeat
 }
 
 #templatemo_header {
@@ -84,7 +84,6 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
 #site_title { float: left; }
 #site_title h1 { margin: 0; padding: 0; }
-#site_title h1 a { display: block; width: 180px; height: 40px; color: #fff; text-indent: -10000px; background: url(images/templatemo_logo.png)  no-repeat top left }
 
 #search_box { float: right; margin-top: 20px; width: 240px; height: 24px }
 #search_box form { clear: both; width: 240px; height: 24px; padding: 0; margin: 0 }
@@ -96,7 +95,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
     clear: both;
     width: 940px;
     height: 53px;
-    background: url(images/templamtemo_menu.png)
+    background: url(../images/templamtemo_menu.png)
 }
 
 #templatemo_menu ul {
@@ -126,7 +125,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
     outline: none;
     border: none;
     letter-spacing: 1px;
-    background: url(images/templatmeo_menu_divider.png) right repeat-y;
+    background: url(../images/templatmeo_menu_divider.png) right repeat-y;
 }
 
 #templatemo_menu ul li a:hover, #templatemo_menu ul .current {
@@ -144,7 +143,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
     height: 240px;
     padding: 30px 40px;
     overflow: hidden;
-    background: url(images/templatemo_middle.png) repeat-y center
+    background: url(../images/templatemo_middle.png) repeat-y center
 }
 
 #mid_title { font-size: 34px; font-weight: 400; margin-bottom: 30px }
@@ -157,7 +156,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 }
 #templatemo_middle img { float: right; margin-left: 60px }
 
-#learn_more a { display: block; width: 202px; height: 42px; background: url(images/templatemo_learn_more.png) }
+#learn_more a { display: block; width: 202px; height: 42px; background: url(../images/templatemo_learn_more.png) }
 
 #templatemo_fp_services {
     clear: both;
@@ -171,7 +170,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
     height: 135px;
     padding: 20px;
     margin-right: 20px;
-    background: url(images/templamteo_service_bg.png) right center no-repeat;
+    background: url(../images/templamteo_service_bg.png) right center no-repeat;
     color: #fff;
     font-size: 16px;
     text-decoration: none;
@@ -198,7 +197,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
     color: #000;
     font-weight: 700;
     text-decoration: none;
-    background:url(images/sb_more.png) no-repeat;
+    background:url(../images/sb_more.png) no-repeat;
     text-shadow: 1px 1px 1px #9adacf;
 }
 
@@ -210,7 +209,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
     clear: both;
     width: 940px;
     padding: 30px 0;
-    background: url(images/templatemo_content.png) repeat-y
+    background: url(../images/templatemo_content.png) repeat-y
 }
 
 #templatemo_main p {
@@ -234,7 +233,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
     height: 20px;
     padding-left: 10px;
     margin-bottom: 5px;
-    background: url(images/templatemo_date.png) no-repeat;
+    background: url(../images/templatemo_date.png) no-repeat;
 }
 
 .fp_news_box h6 { margin-bottom: 0 }
