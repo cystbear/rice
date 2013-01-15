@@ -222,9 +222,13 @@ class Card
      *
      * @return string
      */
-    public function getImage()
+    public function getImage($absolute = false)
     {
-        return $this->image;
+        if (null === $this->image) {
+            return;
+        }
+
+        return self::getImagesPath($absolute).'/'.$this->image;
     }
 
     /**
@@ -433,6 +437,16 @@ class Card
     public function getNumber()
     {
         return $this->number;
+    }
+
+    static public function getImagesPath($absolute = false)
+    {
+        $path = '';
+        if ($absolute) {
+            $path = realpath(__DIR__.'/../../../../web').'/';
+        }
+
+        return $path.'uploads/cards';
     }
 
 }
