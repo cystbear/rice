@@ -31,49 +31,49 @@ class Card
     /**
      * @var string
      *
-     * @ORM\Column(name="cardSet", type="string", length=255)
+     * @ORM\Column(name="cardSet", nullable=true, type="string", length=255)
      */
     private $cardSet;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="manaCost", type="string", length=255)
+     * @ORM\Column(name="manaCost", nullable=true, type="string", length=255)
      */
     private $manaCost;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=255)
+     * @ORM\Column(name="image", nullable=true, type="string", length=255)
      */
     private $image;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="string", length=255)
+     * @ORM\Column(name="type", nullable=true, type="string", length=255)
      */
     private $type;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="artisticDescription", type="string", length=255)
+     * @ORM\Column(name="artisticDescription", nullable=true, type="string", length=255)
      */
     private $artisticDescription;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="artist", type="string", length=255)
+     * @ORM\Column(name="artist", nullable=true, type="string", length=255)
      */
     private $artist;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="number", type="integer")
+     * @ORM\Column(name="number", nullable=true, type="integer")
      */
     private $number;
 
@@ -81,7 +81,7 @@ class Card
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -97,14 +97,14 @@ class Card
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -120,14 +120,14 @@ class Card
     public function setCardSet($cardSet)
     {
         $this->cardSet = $cardSet;
-    
+
         return $this;
     }
 
     /**
      * Get cardSet
      *
-     * @return string 
+     * @return string
      */
     public function getCardSet()
     {
@@ -143,14 +143,14 @@ class Card
     public function setManaCost($manaCost)
     {
         $this->manaCost = $manaCost;
-    
+
         return $this;
     }
 
     /**
      * Get manaCost
      *
-     * @return string 
+     * @return string
      */
     public function getManaCost()
     {
@@ -166,14 +166,14 @@ class Card
     public function setImage($image)
     {
         $this->image = $image;
-    
+
         return $this;
     }
 
     /**
      * Get image
      *
-     * @return string 
+     * @return string
      */
     public function getImage()
     {
@@ -189,14 +189,14 @@ class Card
     public function setType($type)
     {
         $this->type = $type;
-    
+
         return $this;
     }
 
     /**
      * Get type
      *
-     * @return string 
+     * @return string
      */
     public function getType()
     {
@@ -212,14 +212,14 @@ class Card
     public function setArtisticDescription($artisticDescription)
     {
         $this->artisticDescription = $artisticDescription;
-    
+
         return $this;
     }
 
     /**
      * Get artisticDescription
      *
-     * @return string 
+     * @return string
      */
     public function getArtisticDescription()
     {
@@ -235,14 +235,14 @@ class Card
     public function setArtist($artist)
     {
         $this->artist = $artist;
-    
+
         return $this;
     }
 
     /**
      * Get artist
      *
-     * @return string 
+     * @return string
      */
     public function getArtist()
     {
@@ -258,14 +258,14 @@ class Card
     public function setNumber($number)
     {
         $this->number = $number;
-    
+
         return $this;
     }
 
     /**
      * Get number
      *
-     * @return integer 
+     * @return integer
      */
     public function getNumber()
     {
