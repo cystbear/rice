@@ -17,7 +17,10 @@ class LoadCardData implements FixtureInterface, OrderedFixtureInterface
 
     public function load(ObjectManager $manager)
     {
-        $cardSet = $manager->getRepository('RiceDeckKeeperBundle:CardSet')->findOneBy(array());
+        $cardSet = $manager
+            ->getRepository('RiceDeckKeeperBundle:CardSet')
+            ->findOneBy(array('slug'=>'shramy-mirrodina'))
+        ;
 
         $card = new Card();
         $card->setName('Помощник Абуны');
