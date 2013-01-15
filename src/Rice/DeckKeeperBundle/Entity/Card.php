@@ -2,8 +2,10 @@
 
 namespace Rice\DeckKeeperBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Translator\TranslationProxy;
 
 /**
  * Card
@@ -117,6 +119,23 @@ class Card
      */
     private $number;
 
+    /**
+     * @ORM\OneToMany(
+     *     targetEntity="CardTranslation",
+     *     mappedBy="translatable",
+     *     cascade={"all"},
+     *     orphanRemoval=true
+     * )
+     */
+    private $translations;
+
+
+    public function __construct()
+    {
+        $this->translations = new ArrayCollection();
+
+        $this->translate();
+    }
 
     public function __toString()
     {
@@ -437,6 +456,23 @@ class Card
     public function getNumber()
     {
         return $this->number;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function translate($locale = 'en')
+    {
+        if ('en' === $locale) {
+            return $this;
+        }
+
+        return new TranslationProxy($this,
+            $locale,
+            array('name', 'type', 'subType', 'description', 'artisticdescription'),
+            'Rice\DeckKeeperBundle\Entity\CardTranslation',
+            $this->translations
+        );
     }
 
     static public function getImagesPath($absolute = false)
