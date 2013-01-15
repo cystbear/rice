@@ -36,9 +36,7 @@ class Card
     private $slug;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="cardSet", nullable=true, type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="CardSet", inversedBy="cards")
      */
     private $cardSet;
 
@@ -161,7 +159,6 @@ class Card
     /**
      * Set cardSet
      *
-     * @param string $cardSet
      * @return Card
      */
     public function setCardSet($cardSet)
@@ -173,8 +170,6 @@ class Card
 
     /**
      * Get cardSet
-     *
-     * @return string
      */
     public function getCardSet()
     {

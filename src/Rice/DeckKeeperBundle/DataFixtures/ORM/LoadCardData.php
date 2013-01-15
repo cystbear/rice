@@ -3,17 +3,25 @@
 namespace Rice\DeckKeeperBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
 use Rice\DeckKeeperBundle\Entity\Card;
 
-class LoadCardData implements FixtureInterface
+class LoadCardData implements FixtureInterface, OrderedFixtureInterface
 {
+    public function getOrder()
+    {
+        return 20;
+    }
+
     public function load(ObjectManager $manager)
     {
+        $cardSet = $manager->getRepository('RiceDeckKeeperBundle:CardSet')->findOneBy(array());
+
         $card = new Card();
         $card->setName('Помощник Абуны');
-        $card->setCardSet('Шрамы Мирродина');
+        $card->setCardSet($cardSet);
         $card->setManaCost('1W');
         $card->setType('Существо');
         $card->setSubType('Кошка Священник');
@@ -29,7 +37,7 @@ class LoadCardData implements FixtureInterface
 
         $card2 = new Card();
         $card2->setName('Арест');
-        $card2->setCardSet('Шрамы Мирродина');
+        $card2->setCardSet($cardSet);
         $card2->setManaCost('2W');
         $card2->setType('Чары');
         $card2->setSubType('Аура');
@@ -43,7 +51,7 @@ class LoadCardData implements FixtureInterface
 
         $card3 = new Card();
         $card3->setName('Ауриок-Ножедел');
-        $card3->setCardSet('Шрамы Мирродина');
+        $card3->setCardSet($cardSet);
         $card3->setManaCost('WW');
         $card3->setType('Существо');
         $card3->setSubType('Человек Солдат');
