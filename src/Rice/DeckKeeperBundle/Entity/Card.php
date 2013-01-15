@@ -59,9 +59,44 @@ class Card
     /**
      * @var string
      *
-     * @ORM\Column(name="artisticDescription", nullable=true, type="string", length=255)
+     * @ORM\Column(name="subType", nullable=true, type="string", length=255)
      */
-    private $artisticDescription;
+    private $subType;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", nullable=true, type="text")
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="artisticdescription", nullable=true, type="text")
+     */
+    private $artisticdescription;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="rarity", nullable=true, type="string", length=255)
+     */
+    private $rarity;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="power", nullable=true, type="integer")
+     */
+    private $power;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="toughness", nullable=true, type="integer")
+     */
+    private $toughness;
 
     /**
      * @var string
@@ -204,26 +239,141 @@ class Card
     }
 
     /**
-     * Set artisticDescription
+     * Set subType
      *
-     * @param string $artisticDescription
+     * @param string $subType
      * @return Card
      */
-    public function setArtisticDescription($artisticDescription)
+    public function setSubType($subType)
     {
-        $this->artisticDescription = $artisticDescription;
+        $this->subType = $subType;
 
         return $this;
     }
 
     /**
-     * Get artisticDescription
+     * Get subType
      *
      * @return string
      */
-    public function getArtisticDescription()
+    public function getSubType()
     {
-        return $this->artisticDescription;
+        return $this->subType;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Card
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set artisticdescription
+     *
+     * @param string $artisticdescription
+     * @return Card
+     */
+    public function setArtisticdescription($artisticdescription)
+    {
+        $this->artisticdescription = $artisticdescription;
+
+        return $this;
+    }
+
+    /**
+     * Get artisticdescription
+     *
+     * @return string
+     */
+    public function getArtisticdescription()
+    {
+        return $this->artisticdescription;
+    }
+
+    /**
+     * Set rarity
+     *
+     * @param string $rarity
+     * @return Card
+     */
+    public function setRarity($rarity)
+    {
+        $this->rarity = $rarity;
+
+        return $this;
+    }
+
+    /**
+     * Get rarity
+     *
+     * @return string
+     */
+    public function getRarity()
+    {
+        return $this->rarity;
+    }
+
+    /**
+     * Set power
+     *
+     * @param integer $power
+     * @return Card
+     */
+    public function setPower($power)
+    {
+        $this->power = $power;
+
+        return $this;
+    }
+
+    /**
+     * Get power
+     *
+     * @return integer
+     */
+    public function getPower()
+    {
+        return $this->power;
+    }
+
+    /**
+     * Set toughness
+     *
+     * @param integer $toughness
+     * @return Card
+     */
+    public function setToughness($toughness)
+    {
+        $this->toughness = $toughness;
+
+        return $this;
+    }
+
+    /**
+     * Get toughness
+     *
+     * @return integer
+     */
+    public function getToughness()
+    {
+        return $this->toughness;
     }
 
     /**
@@ -249,10 +399,11 @@ class Card
         return $this->artist;
     }
 
+
     /**
      * Set number
      *
-     * @param integer $number
+     * @param integer $toughness
      * @return Card
      */
     public function setNumber($number)
@@ -271,4 +422,5 @@ class Card
     {
         return $this->number;
     }
+
 }
