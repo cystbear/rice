@@ -23,7 +23,92 @@ class CardProxy
 
     public function getCard()
     {
-        return $this->card;
+        return $this->card->translate();
+    }
+
+    public function getNameEn()
+    {
+        return $this->card->translate()->getName();
+    }
+    public function setNameEn($name)
+    {
+        $this->card->translate()->setName($name);
+    }
+    public function getNameRu()
+    {
+        return $this->card->translate('ru')->getName();
+    }
+    public function setNameRu($name)
+    {
+        $this->card->translate('ru')->setName($name);
+    }
+
+    public function getTypeEn()
+    {
+        return $this->card->translate()->getType();
+    }
+    public function setTypeEn($type)
+    {
+        $this->card->translate()->setType($type);
+    }
+    public function getTypeRu()
+    {
+        return $this->card->translate('ru')->getType();
+    }
+    public function setTypeRu($type)
+    {
+        $this->card->translate('ru')->setType($type);
+    }
+
+    public function getSubTypeEn()
+    {
+        return $this->card->translate()->getSubType();
+    }
+    public function setSubTypeEn($subType)
+    {
+        $this->card->translate()->setSubType($subType);
+    }
+    public function getSubTypeRu()
+    {
+        return $this->card->translate('ru')->getSubType();
+    }
+    public function setSubTypeRu($subType)
+    {
+        $this->card->translate('ru')->setSubType($subType);
+    }
+
+    public function getDescriptionEn()
+    {
+        return $this->card->translate()->getDescription();
+    }
+    public function setDescriptionEn($description)
+    {
+        $this->card->translate()->setDescription($description);
+    }
+    public function getDescriptionRu()
+    {
+        return $this->card->translate('ru')->getDescription();
+    }
+    public function setDescriptionRu($description)
+    {
+        $this->card->translate('ru')->setDescription($description);
+    }
+
+    public function getArtisticdescriptionEn()
+    {
+        return $this->card->translate()->getArtisticdescription();
+    }
+    public function setArtisticdescriptionEn($artisticdescription)
+    {
+        $this->card->translate()->setArtisticdescription($artisticdescription);
+    }
+    public function getArtisticdescriptionRu()
+    {
+        return $this->card->translate('ru')->getArtisticdescription();
+    }
+    public function setArtisticdescriptionRu($artisticdescription)
+    {
+        $this->card->translate('ru')->setArtisticdescription($artisticdescription);
     }
 
     public function evaluateUpload()
