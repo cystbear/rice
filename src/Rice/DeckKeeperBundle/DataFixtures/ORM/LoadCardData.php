@@ -2,11 +2,13 @@
 
 namespace Rice\DeckKeeperBundle\DataFixtures\ORM;
 
+use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
 use Rice\DeckKeeperBundle\Entity\Card;
+use Rice\DeckKeeperBundle\Proxy\CardProxy;
 
 class LoadCardData implements FixtureInterface, OrderedFixtureInterface
 {
@@ -66,6 +68,27 @@ class LoadCardData implements FixtureInterface, OrderedFixtureInterface
         $card3->setArtist('Mike Bierek');
         $card3->setNumber(3);
         $manager->persist($card3);
+
+        $manager->flush();
+
+        copy(__DIR__.'/ImagesVault/1.jpg', __DIR__.'/Images/1.jpg');
+        copy(__DIR__.'/ImagesVault/2.jpg', __DIR__.'/Images/2.jpg');
+        copy(__DIR__.'/ImagesVault/3.jpg', __DIR__.'/Images/3.jpg');
+
+        $image1 = new File(__DIR__.'/Images/1.jpg');
+        $cardProxy1 = new CardProxy($card);
+        $cardProxy1->imageFile = $image1;
+        $cardProxy1->evaluateUpload();
+
+        $image2 = new File(__DIR__.'/Images/2.jpg');
+        $cardProxy2 = new CardProxy($card2);
+        $cardProxy2->imageFile = $image2;
+        $cardProxy2->evaluateUpload();
+
+        $image3 = new File(__DIR__.'/Images/3.jpg');
+        $cardProxy3 = new CardProxy($card3);
+        $cardProxy3->imageFile = $image3;
+        $cardProxy3->evaluateUpload();
 
         $manager->flush();
     }
