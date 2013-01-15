@@ -3,6 +3,7 @@
 namespace Rice\DeckKeeperBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * CardSet
@@ -27,6 +28,12 @@ class CardSet
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
+
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(name="slug", length=128, unique=true)
+     */
+    private $slug;
 
     /**
      * @var integer
@@ -77,6 +84,11 @@ class CardSet
     public function getName()
     {
         return $this->name;
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**
