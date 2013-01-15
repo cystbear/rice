@@ -16,7 +16,8 @@ show_run("Creating directories for app kernel", "mkdir -p app/cache/dev app/cach
 show_run("Warming up dev cache", "php app/console --env=dev cache:clear");
 //show_run("Warming up test cache", "php app/console --env=test cache:clear");
 
-show_run("fixtures:load", "app/console doctrine:fixtures:load --purge-with-truncate --no-interaction");
+//show_run("fixtures:load", "app/console doctrine:fixtures:load --purge-with-truncate --no-interaction");
+show_run("fixtures:load", "app/console doctrine:fixtures:load --no-interaction");
 
 show_run("Changing permissions", "chmod -R 777 app/cache app/logs web/uploads");
 
