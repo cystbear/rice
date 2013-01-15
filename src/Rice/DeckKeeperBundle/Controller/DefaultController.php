@@ -11,8 +11,16 @@ class DefaultController extends Controller
     /**
      * @Template()
      */
-    public function indexAction($name)
+    public function indexAction()
     {
-        return array('name' => $name);
+        $cards = $this
+            ->getDoctrine()
+            ->getRepository('RiceDeckKeeperBundle:Card')
+            ->findAll()
+        ;
+
+        return array(
+            'cards' => $cards,
+        );
     }
 }
