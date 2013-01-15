@@ -23,4 +23,20 @@ class DefaultController extends Controller
             'cards' => $cards,
         );
     }
+
+    /**
+     * @Template()
+     */
+    public function cardAction($slug)
+    {
+        $card = $this
+            ->getDoctrine()
+            ->getRepository('RiceDeckKeeperBundle:Card')
+            ->findOneBy(array('slug' => $slug))
+        ;
+
+        return array(
+            'card' => $card,
+        );
+    }
 }
