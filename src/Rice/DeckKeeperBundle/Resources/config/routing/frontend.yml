@@ -1,11 +1,11 @@
 frontend_deck_keeper_index:
-    pattern:    /
-    defaults:   { _controller: RiceDeckKeeperBundle:Default:index }
+    pattern:    /{_locale}
+    defaults:   { _controller: RiceDeckKeeperBundle:Default:index, _locale: en }
 
 frontend_deck_keeper_card:
-    pattern:    /card/{slug}
-    defaults:   { _controller: RiceDeckKeeperBundle:Default:card }
+    pattern:    /{_locale}/card/{slug}
+    defaults:   { _controller: RiceDeckKeeperBundle:Default:card, _locale: en }
 
 frontend_deck_keeper_cardset_index:
-    pattern:    /sets
-    defaults:   { _controller: RiceDeckKeeperBundle:CardSet:index }
+    pattern:    /{_locale}/sets
+    defaults:   { _controller: RiceDeckKeeperBundle:CardSet:index, _locale: en }
