@@ -3,9 +3,11 @@
 {% block content %}
     <div id="templatemo_main">
 
-        <div class="post_header">
-            <a href="{{ path('frontend_deck_keeper_new') }}">+Card</a>
-        </div>
+        {% if is_granted('ROLE_USER') %}
+            <div class="post_header">
+                <a href="{{ path('frontend_deck_keeper_new') }}">+Card</a>
+            </div>
+        {% endif %}
 
         <div class="col_w620 float_l">
 

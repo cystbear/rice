@@ -27,6 +27,14 @@ class LoadUserData implements FixtureInterface, OrderedFixtureInterface, Contain
 
     public function load(ObjectManager $manager)
     {
+        $fred = new User();
+        $fred->setUsername('fred');
+        $fred->setEmail('fred@example.com');
+        $fred->setPlainPassword('fred');
+        $fred->setEnabled(true);
+        $fred->addRole('ROLE_USER');
+        $this->userManager->updateUser($fred);
+
         $admin = new User();
         $admin->setUsername('admin');
         $admin->setEmail('admin@example.com');
