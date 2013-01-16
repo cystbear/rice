@@ -1,0 +1,37 @@
+{% extends "RiceDeckKeeperBundle::layout.html.twig" %}
+
+{% block content %}
+    <div id="templatemo_main">
+
+        {% if is_granted('ROLE_USER') %}
+            <div class="post_header">
+                <a href="{{ path('frontend_deck_keeper_new') }}">+Card</a>
+            </div>
+        {% endif %}
+
+        <div class="col_w620 float_l">
+
+
+            {% for card in cards %}
+
+                <div class="post_box">
+                    <div class="post_header">
+                        <a href="{{ path('frontend_deck_keeper_card', {slug: card.slug}) }}"><h2>{{ card.translate(app.request.locale).name }}</h2></a>
+                    </div>
+                    <a href="{{ path('frontend_deck_keeper_card', {slug: card.slug}) }}">
+                        <img src="/{{ card.image }}" alt="{{ card.slug }}"/>
+                    </a>
+                    <p>{{ card.translate(app.request.locale).description }}</p>
+                    <p><strong>{{ card.translate(app.request.locale).artisticdescription }}</strong></p>
+                    <div class="cleaner"></div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+        {% include "RiceDeckKeeperBundle::sidebar.html.twig" %}
+
+        <div class="cleaner"></div>
+    </div>
+{% endblock content %}

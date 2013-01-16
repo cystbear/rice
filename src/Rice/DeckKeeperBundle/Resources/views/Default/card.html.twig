@@ -1,0 +1,37 @@
+{% extends "RiceDeckKeeperBundle::layout.html.twig" %}
+
+{% block content %}
+    <div id="templatemo_main">
+
+        <div class="col_w620 float_l">
+
+            <div class="post_box">
+                <div class="post_header">
+                    <a href="#"><h2>{{ card.translate(app.request.locale).name }}</h2></a>
+                </div>
+                <img src="/{{ card.image }}" alt="{{ card.slug }}"/>
+                <p>{{ card.translate(app.request.locale).description }}</p>
+                <p><strong>{{ card.translate(app.request.locale).artisticdescription }}</strong></p>
+
+                <hr />
+
+                <p>{{ 'Set'|trans }}: <strong>{{ card.cardSet }}</strong></p>
+                <p>{{ 'Mana Cost'|trans }}: <strong>{{ card.manaCost }}</strong></p>
+                <p>{{ 'Type'|trans }}: <strong>{{ card.translate(app.request.locale).type }}</strong></p>
+                <p>{{ 'Sub Type'|trans }}: <strong>{{ card.translate(app.request.locale).subType }}</strong></p>
+                <p>{{ 'Rarity'|trans }}: <strong>{{ card.rarity }}</strong></p>
+                <p>{{ 'Power'|trans }}: <strong>{{ card.power }}</strong></p>
+                <p>{{ 'Toughness'|trans }}: <strong>{{ card.toughness }}</strong></p>
+                <p>{{ 'Artist'|trans }}: <strong>{{ card.artist }}</strong></p>
+                <p>#: <strong>{{ card.number }}</strong></p>
+
+                <div class="cleaner"></div>
+            </div>
+
+        </div>
+
+        {% include "RiceDeckKeeperBundle::sidebar.html.twig" %}
+
+        <div class="cleaner"></div>
+    </div>
+{% endblock content %}

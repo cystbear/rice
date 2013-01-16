@@ -1,0 +1,33 @@
+{% extends "RiceDeckKeeperBundle::layout.html.twig" %}
+
+{% block content %}
+    <div id="templatemo_main">
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <div class="post_header">
+                <a href="{{ path('frontend_deck_keeper_cardset_new') }}">+Set</a>
+            </div>
+        {% endif %}
+
+        <div class="col_w620 float_l">
+
+            {% for set in sets %}
+
+                <div class="post_box">
+                    <div class="post_header">
+                        <a href="/"><h2>{{ set }}</h2></a>
+                    </div>
+                    <p>{{ 'Year'|trans }}: <strong>{{ set.year }}</strong></p>
+                    <p>{{ 'Cards count'|trans }}: <strong>{{ set.cards.count }}</strong></p>
+                    <div class="cleaner"></div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+        {% include "RiceDeckKeeperBundle::sidebar.html.twig" %}
+
+        <div class="cleaner"></div>
+    </div>
+{% endblock content %}
