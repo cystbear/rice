@@ -1,0 +1,14 @@
+{% extends "RiceDeckKeeperBundle::layout.html.twig" %}
+
+{% block content %}
+    <form action="{{ path('frontend_deck_keeper_cardset_new') }}" method="post" {{ form_enctype(form) }}>
+        <fieldset>
+
+            {{ form_widget(form) }}
+
+            <div class="actions">
+                <button class="btn primary" type="submit">Create</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock content %}
