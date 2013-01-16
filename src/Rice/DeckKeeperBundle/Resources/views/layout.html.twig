@@ -38,14 +38,24 @@
 
         <div id="templatemo_menu">
             <ul>
+                {% if is_granted('ROLE_USER') %}
+                    <li class="float_r"><a href="{{ path('fos_user_security_logout') }}">{{ 'Logout' | trans }}</a></li>
+                {% else %}
+                    <li class="float_r"><a href="{{ path('fos_user_registration_register') }}">{{ 'Register' | trans }}</a></li>
+                    <li class="float_r"><a href="{{ path('fos_user_security_login') }}">{{ 'Login' | trans }}</a></li>
+                {% endif %}
+
                 <li><a href="{{ path('frontend_deck_keeper_index') }}">{{ 'Cards'|trans }}</a></li>
                 <li><a href="{{ path('frontend_deck_keeper_cardset_index') }}">{{ 'Sets'|trans }}</a></li>
+
                 <li class="float_r"><a href="{{ path('frontend_deck_keeper_index', {_locale:'ru'}) }}">ru</a></li>
                 <li class="float_r"><a href="{{ path('frontend_deck_keeper_index', {_locale:'en'}) }}">en</a></li>
             </ul>
         </div>
 
-        {% block content %}{% endblock content %}
+        {% block content %}
+            {% block fos_user_content %}{% endblock fos_user_content %}
+        {% endblock content %}
 
         <div id="templatemo_main_bottom"></div>
         <div class="cleaner"></div>
