@@ -26,6 +26,63 @@ class CardProxy
         return $this->card->translate();
     }
 
+    public function setManaCost($manaCost)
+    {
+        $this->card->setManaCost($manaCost);
+    }
+    public function getManaCost()
+    {
+        return $this->card->getManaCost();
+    }
+    public function setCardSet($cardSet)
+    {
+        $this->card->setCardSet($cardSet);
+    }
+    public function getCardSet()
+    {
+        return $this->card->getCardSet();
+    }
+    public function setRarity($rarity)
+    {
+        $this->card->setRarity($rarity);
+    }
+    public function getRarity()
+    {
+        return $this->card->getRarity();
+    }
+    public function setPower($power)
+    {
+        $this->card->setPower($power);
+    }
+    public function getPower()
+    {
+        return $this->card->getPower();
+    }
+    public function setToughness($toughness)
+    {
+        $this->card->setToughness($toughness);
+    }
+    public function getToughness()
+    {
+        return $this->card->getToughness();
+    }
+    public function setArtist($artist)
+    {
+        $this->card->setArtist($artist);
+    }
+    public function getArtist()
+    {
+        return $this->card->getArtist();
+    }
+    public function setNumber($number)
+    {
+        $this->card->setNumber($number);
+    }
+    public function getNumber()
+    {
+        return $this->card->getNumber();
+    }
+
     public function getNameEn()
     {
         return $this->card->translate()->getName();

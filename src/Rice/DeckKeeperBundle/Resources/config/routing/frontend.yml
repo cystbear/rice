@@ -6,6 +6,10 @@ frontend_deck_keeper_card:
     pattern:    /{_locale}/card/{slug}
     defaults:   { _controller: RiceDeckKeeperBundle:Default:card, _locale: en }
 
+frontend_deck_keeper_new:
+    pattern:    /{_locale}/add-card
+    defaults:   { _controller: RiceDeckKeeperBundle:Default:new, _locale: en }
+
 frontend_deck_keeper_cardset_index:
     pattern:    /{_locale}/sets
     defaults:   { _controller: RiceDeckKeeperBundle:CardSet:index, _locale: en }
