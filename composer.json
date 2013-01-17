@@ -24,7 +24,16 @@
         "jms/di-extra-bundle": "1.1.*",
         "kriswallsmith/assetic": "1.1.*@dev",
 
-        "friendsofsymfony/user-bundle": "@dev"
+        "friendsofsymfony/user-bundle": "@dev",
+
+        "behat/behat": "@dev",
+        "behat/mink": "@dev",
+        "behat/symfony2-extension": "@dev",
+        "behat/mink-extension": "@dev",
+        "vipsoft/doctrine-data-fixtures-extension": "@dev",
+
+        "behat/mink-browserkit-driver": "@dev",
+        "behat/mink-sahi-driver": "@dev"
     },
     "scripts": {
         "post-install-cmd": [
