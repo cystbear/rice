@@ -34,7 +34,7 @@ class CardSetController extends Controller
         $request = $this->getRequest();
 
         if ('POST' === $request->getMethod()) {
-            $form->bindRequest($request);
+            $form->bind($request);
 
             if ($form->isValid()) {
                 $em = $this->getDoctrine()->getEntityManager();
