@@ -26,6 +26,7 @@ class AppKernel extends Kernel
 
             new Rice\UserBundle\RiceUserBundle(),
             new Rice\DeckKeeperBundle\RiceDeckKeeperBundle(),
+            new Rice\GlueBundle\RiceGlueBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
