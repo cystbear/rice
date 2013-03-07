@@ -18,6 +18,11 @@ class Customer
     private $id;
 
     /**
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
      * @ORM\OneToOne(targetEntity="Cart", mappedBy="customer")
      */
     private $cart;
@@ -25,6 +30,15 @@ class Customer
     public function getId()
     {
         return $this->id;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
     }
 
     public function setCart($cart)

@@ -1,0 +1,3 @@
+frontend_glue_index:
+    pattern:    /glue
+    defaults:   { _controller: RiceGlueBundle:Default:index }

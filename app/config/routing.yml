@@ -13,9 +13,15 @@ fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
 
+rice_glue_frontend:
+    resource:   @RiceGlueBundle/Resources/config/routing/frontend.yml
+    prefix:   /
+
 rice_deck_keeper_frontend:
     resource:   @RiceDeckKeeperBundle/Resources/config/routing/frontend.yml
     prefix:   /
+
+
 
 # Internal routing configuration to handle ESI
 # ****** WARNING ******

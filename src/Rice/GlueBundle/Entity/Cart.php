@@ -18,6 +18,11 @@ class Cart
     private $id;
 
     /**
+     * @ORM\Column(name="amount", type="string", length=255)
+     */
+    private $amount;
+
+    /**
      * @ORM\OneToOne(targetEntity="Customer", inversedBy="cart")
      **/
     private $customer;
@@ -25,6 +30,16 @@ class Cart
     public function getId()
     {
         return $this->id;
+    }
+
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+    }
+
+    public function getAmount()
+    {
+        return $this->amount;
     }
 
     public function setCustomer($customer)

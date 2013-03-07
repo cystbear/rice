@@ -1,0 +1,13 @@
+{% extends "RiceDeckKeeperBundle::layout.html.twig" %}
+
+{% block content %}
+    <div id="templatemo_main">
+
+        {{ customer.cart.amount }}
+
+        {% for feature in dream.features %}
+            {{ dump(feature) }}
+        {% endfor %}
+
+    </div>
+{% endblock content %}

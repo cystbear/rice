@@ -31,9 +31,11 @@ class LoadGluedData implements FixtureInterface, OrderedFixtureInterface
         // ============================================================================================================
 
         $customer = new Entity\Customer();
+        $customer->setName('customer 1');
         $manager->persist($customer);
 
         $cart = new Entity\Cart();
+        $cart->setAmount('100500');
         $cart->setCustomer($customer);
         $manager->persist($cart);
 
