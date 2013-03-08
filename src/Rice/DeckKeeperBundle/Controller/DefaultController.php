@@ -51,7 +51,7 @@ class DefaultController extends Controller
         $request = $this->getRequest();
 
         if ('POST' === $request->getMethod()) {
-            $form->bindRequest($request);
+            $form->bind($request);
 
             if ($form->isValid()) {
                 $form->getData()->evaluateUpload();
